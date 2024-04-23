@@ -1,0 +1,53 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    height: 100vh;
+  }
+  
+  .block {
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  
+  h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+  }
+  
+  h2 span {
+    content: attr(data-circle); /* Використовуємо атрибут даних для значення кола */
+    border: 2px solid #ff0000;
+    border-radius: 50%; /* Круглий фон */
+    padding: 10px; /* Розмір області навколо тексту */
+    margin-right: 10px; /* Відступ від тексту */
+  }
+  
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 65px;
+  }
+  
+  li:nth-child(even) {
+    color: red; /* червоний колір тексту для парних елементів списку */
+  }
+  
+  li::before {
+    content: "\2022"; /* заміна маркерів списку */
+    color: #333;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
